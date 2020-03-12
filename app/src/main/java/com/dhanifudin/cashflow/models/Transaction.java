@@ -28,27 +28,33 @@ public class Transaction implements Parcelable {
     }
 
     public void setDescription(String description) {
+
         this.description = description;
     }
 
     public int getAmount() {
+
         return amount;
     }
 
     public void setAmount(int amount) {
+
         this.amount = amount;
     }
 
     public Type getType() {
+
         return type;
     }
 
     public void setType(Type type) {
+
         this.type = type;
     }
 
     @Override
     public int describeContents() {
+
         return 0;
     }
 
@@ -69,11 +75,13 @@ public class Transaction implements Parcelable {
     public static final Creator<Transaction> CREATOR = new Creator<Transaction>() {
         @Override
         public Transaction createFromParcel(Parcel source) {
+
             return new Transaction(source);
         }
 
         @Override
         public Transaction[] newArray(int size) {
+
             return new Transaction[size];
         }
     };
